@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Remilia Darknets</title>
+    </head>
+    <body>
+        <div class="top-container">
+            <div class="top-item"><img id="icon" src="static/icon.jpg" /></div>
+            <div class="top-item">
+                <div>
+                    <p id="name">Remilia Darknets</p>
+                    <p id="description">🏴 Revolutionary Vampire Girl</p>
+                </div>
+                <div>
+                    <p class="degree">
+                        🧐 Anarchism, Bakuninism, Libertarian Marxism
+                    </p>
+                    <p class="degree">
+                        👀 Decentralized Computing, P2P Technology
+                    </p>
+                    <p class="degree">
+                        <i class="fas fa-location"></i>
+                        📍 Bakuningrad, WSSR
+                    </p>
+                </div>
+                <p class="degree">
+                    <a href="https://x.com/anarchodynabook"> Twitter(X) </a>
+                    <a href="https://github.com/anarcho-dynabook"> GitHub </a>
+                </p>
+            </div>
+        </div>
+        <div id="main">
+            <div class="post">
+                <h1>Bakuningrad the dream city</h1>
+                <p>
+                    My birthplace, the Bakuningrad is a den of we Bakuninists,
+                    that indicate to cities that's took hegemony by us! We have
+                    to understand that city is "imagined community" too, and
+                    conversely, we can create "imagined community" consciously,
+                    and take hegemony.
+                </p>
+                <p>
+                    If we success to take hegemony, It's allowed to famous
+                    cities such as Tokyo, New York or Moscow, called
+                    "Bakuningrad" like we want!
+                </p>
+            </div>
+            <div class="post">
+                <h1>What's next era of the MODERN?</h1>
+                <p>
+                    The surmount of modern, that is difficult main theme of my
+                    and many orthodox socialists' thoughts. I can say modern is
+                    progressive and free era by comparison with medieval
+                    feudalism or ancient empire, but we shall not stop at
+                    modern.
+                </p>
+                <p>
+                    We have to defeat national-state, capitalism and patriarchy,
+                    these social structure that let people be alienation. Karl
+                    Marx images "Association of free producers" that will be
+                    alternative while critique of capitalism. I very agree that
+                    clear vision.
+                </p>
+                <p>
+                    But I think political revolution and proletarian
+                    dictatorship is too authoritarian strategy. In fact,
+                    Soviet-Russia that's born by people's spontaneous but
+                    corrupt to state-capitalism. I'm oriented to economical
+                    revolution like Proudhon. I think the economical revolution
+                    needs technical methods to reform means of production and to
+                    establish a new society that's based on mutual aid by each
+                    free will.
+                </p>
+            </div>
+        </div>
+    </body>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            font-size: large;
+            background-color: rgb(40, 40, 50);
+            color: whitesmoke;
+            * {
+                font-weight: lighter;
+                margin: 0;
+                padding: 0;
+            }
+            .title {
+                padding-top: 5%;
+                padding-bottom: 2%;
+            }
+            .top-container {
+                display: flex;
+                height: max-content;
+                background: url("static/header.png"), rgba(0, 0, 0, 0.8);
+                background-blend-mode: multiply;
+                padding: 1%;
+                #icon {
+                    border-radius: 10%;
+                    width: 300px;
+                    height: 300px;
+                }
+                .top-item {
+                    position: relative;
+                    font-size: 100px;
+                    padding: 10px;
+                    #name {
+                        text-shadow: 5px 5px 10px violet;
+                        font-size: 70%;
+                    }
+                    #description {
+                        text-align: center;
+                        font-size: 30%;
+                        background-color: whitesmoke;
+                        color: rgb(40, 40, 50);
+                        margin-bottom: 20px;
+                    }
+                    .degree {
+                        font-size: 25%;
+                        color: whitesmoke;
+                        margin-bottom: 1%;
+                    }
+                    div {
+                        margin-bottom: 10px;
+                    }
+                    a {
+                        color: lightblue;
+                        text-decoration: none;
+                        &:hover {
+                            color: violet;
+                        }
+                    }
+                }
+            }
+            #main {
+                padding-top: 5vh;
+                padding-bottom: 5vh;
+                padding-left: 5vw;
+                padding-right: 5vw;
+                .post {
+                    border-bottom-right-radius: 15px;
+                    border: 1px solid lightgray;
+                    border-left-style: none;
+                    border-top-style: none;
+                    margin: 0;
+                    padding: 15px;
+                    h1 {
+                        margin-bottom: 10px;
+                    }
+                    p {
+                        font-size: 22px;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+
+        @media (max-width: 950px) {
+            .top-container {
+                flex-direction: column;
+            }
+        }
+    </style>
+</html>
