@@ -246,19 +246,19 @@
         imgs.forEach((img) => {
             function createZoom() {
                 let parent = img.parentNode;
-                img.parentNode.removeChild(img);
-                img.classList.add("zoom");
+                let newimg = img.cloneNode(true);
+                newimg.classList.add("zoom");
                 document.body.classList.add("disable");
                 function removeZoom() {
-                    img.classList.remove("zoom");
-                    img.addEventListener("click", createZoom);
-                    img.removeEventListener("click", removeZoom);
+                    newimg.classList.remove("zoom");
+                    newimg.addEventListener("click", createZoom);
+                    newimg.removeEventListener("click", removeZoom);
                     document.body.classList.remove("disable");
-                    parent.appendChild(img);
+                    document.body.removeChild(newimg);
                 }
-                img.removeEventListener("click", createZoom);
-                img.addEventListener("click", removeZoom);
-                document.body.appendChild(img);
+                newimg.removeEventListener("click", createZoom);
+                newimg.addEventListener("click", removeZoom);
+                document.body.appendChild(newimg);
             }
             img.addEventListener("click", createZoom);
         });
