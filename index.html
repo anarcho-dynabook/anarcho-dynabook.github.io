@@ -79,20 +79,20 @@
                 </p>
                 <div class="container">
                     <div class="item">
-                        <img src="static/art.png" />
+                        <img src="static/art.jpg" />
                     </div>
                     <div class="item">
                         <p>
                             This poster contrasts Libertarian vs Authoritarian
-                            in the Leftist movement, or to say clearly
-                            allelomorphism of between Anarchists and Bolsheviks.
-                            Left light and yellow panel shows libertarian people
-                            who are demonstrating their principles on the
-                            streets. Right dark and red panel shows
-                            authoritarian people who are soldiers, have many
-                            flags of Lenin. And front green stamps that's wrote
-                            "uncensored", means this poster is outside of
-                            statists' watching.
+                            in the leftist movement, or clearly to say
+                            traditional allelomorphism of between Anarchists and
+                            Bolsheviks. Left light and yellow screen shows
+                            libertarian people who are demonstrating their
+                            principles on the streets. Right dark and red screen
+                            shows authoritarian, USSR soldiers who have flags of
+                            Lenin. And thick and black framework that splits up
+                            these screen give this poster by and large vigor
+                            impression.
                         </p>
                     </div>
                 </div>
@@ -140,6 +140,20 @@
                 .item {
                     position: relative;
                 }
+            }
+            .zoom {
+                position: fixed;
+                top: 10%;
+                left: 10%;
+                width: 80%;
+                height: 80%;
+                object-fit: contain;
+                z-index: 999;
+            }
+            &.disable {
+                touch-action: none;
+                overflow: hidden;
+                user-select: none;
             }
             #top {
                 background: url("static/header.png"), rgba(0, 0, 0, 0.8);
@@ -194,7 +208,7 @@
                 padding-right: 15%;
                 .post {
                     border-bottom-right-radius: 15px;
-                    border: 1px solid lightgray;
+                    border: 1px solid lightblue;
                     border-left-style: none;
                     border-top-style: none;
                     margin: 0;
@@ -226,4 +240,27 @@
             }
         }
     </style>
+
+    <script>
+        let imgs = document.querySelectorAll("img");
+        imgs.forEach((img) => {
+            function createZoom() {
+                let parent = img.parentNode;
+                img.parentNode.removeChild(img);
+                img.classList.add("zoom");
+                document.body.classList.add("disable");
+                function removeZoom() {
+                    img.classList.remove("zoom");
+                    img.addEventListener("click", createZoom);
+                    img.removeEventListener("click", removeZoom);
+                    document.body.classList.remove("disable");
+                    parent.appendChild(img);
+                }
+                img.removeEventListener("click", createZoom);
+                img.addEventListener("click", removeZoom);
+                document.body.appendChild(img);
+            }
+            img.addEventListener("click", createZoom);
+        });
+    </script>
 </html>
