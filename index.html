@@ -108,7 +108,7 @@
                     composition. I love it and try to learn from it to create my
                     poster. My work is below image.
                 </p>
-                <img src="static/art.png" />
+                <a href="static/art.png"> Click to view </a>
                 <p>
                     This poster contrasts Libertarian vs Authoritarian in the
                     leftist movement, or clearly to say traditional opposing
@@ -175,7 +175,13 @@
                 object-fit: contain;
                 z-index: 999;
             }
-
+            a {
+                color: lightblue;
+                text-decoration: none;
+                &:hover {
+                    text-shadow: 5px 5px 10px violet;
+                }
+            }
             &.disable {
                 opacity: 0.2;
                 touch-action: none;
@@ -220,13 +226,6 @@
                     div {
                         margin-bottom: 10px;
                     }
-                    a {
-                        color: lightblue;
-                        text-decoration: none;
-                        &:hover {
-                            text-shadow: 5px 5px 10px violet;
-                        }
-                    }
                 }
             }
             #content {
@@ -245,7 +244,8 @@
                     h1 {
                         margin-bottom: 10px;
                     }
-                    p {
+                    p,
+                    a {
                         font-size: 22px;
                         margin-top: 5px;
                         margin-bottom: 10px;
