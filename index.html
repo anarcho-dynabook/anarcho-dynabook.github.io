@@ -274,28 +274,4 @@
             }
         }
     </style>
-
-    <script>
-        let imgs = document.querySelectorAll("img");
-        let main = document.getElementById("main");
-        imgs.forEach((img) => {
-            function createZoom() {
-                let parent = img.parentNode;
-                let newimg = img.cloneNode(true);
-                newimg.classList.add("zoom");
-                main.classList.add("disable");
-                function removeZoom() {
-                    newimg.classList.remove("zoom");
-                    newimg.addEventListener("click", createZoom);
-                    newimg.removeEventListener("click", removeZoom);
-                    main.classList.remove("disable");
-                    document.body.removeChild(newimg);
-                }
-                newimg.removeEventListener("click", createZoom);
-                newimg.addEventListener("click", removeZoom);
-                document.body.appendChild(newimg);
-            }
-            img.addEventListener("click", createZoom);
-        });
-    </script>
 </html>
