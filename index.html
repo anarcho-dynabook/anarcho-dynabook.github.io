@@ -163,45 +163,6 @@
                 margin: 0;
                 padding: 0;
             }
-            .title {
-                padding-top: 5%;
-                padding-bottom: 2%;
-            }
-            .container {
-                display: flex;
-                flex-direction: row;
-                height: max-content;
-                .item {
-                    position: relative;
-                }
-            }
-            .zoom {
-                position: fixed;
-                top: 10vh;
-                left: 10vw;
-                width: 80vw;
-                height: 80vh;
-                object-fit: contain;
-                z-index: 999;
-            }
-            .center {
-                width: 100vw;
-                display: flex;
-                align-items: center;
-            }
-            a {
-                color: lightblue;
-                text-decoration: none;
-                &:hover {
-                    text-shadow: 5px 5px 10px violet;
-                }
-            }
-            &.disable {
-                opacity: 0.2;
-                touch-action: none;
-                overflow: hidden;
-                user-select: none;
-            }
             #main {
                 background: url("static/header.png"), rgba(0, 0, 0, 80%);
                 background-blend-mode: multiply;
@@ -250,6 +211,9 @@
                 margin: 0;
                 padding: 0;
                 margin-top: 50px;
+                width: 100vw;
+                display: flex;
+                align-items: center;
                 flex-direction: column;
                 .post {
                     max-width: 900px;
@@ -279,6 +243,22 @@
                         display: block;
                     }
                 }
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: max-content;
+            .item {
+                position: relative;
+            }
+        }
+        a {
+            color: lightblue;
+            text-decoration: none;
+            &:hover {
+                text-shadow: 5px 5px 10px violet;
             }
         }
     </style>
