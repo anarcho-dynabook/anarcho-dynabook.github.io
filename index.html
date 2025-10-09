@@ -14,7 +14,8 @@
                 </div>
                 <div id="topic">
                     <p class="degree">
-                        🧐 Anarchism, Bakunin-ism, Libertarian Marxism
+                        🧐 Anarchism, Bakunin-ism, Libertarian Marxism, Hegelian
+                        Left
                     </p>
                     <p class="degree">
                         💻 Decentralized Computing, Peer to Peer Technology
@@ -27,7 +28,7 @@
                 </p>
             </div>
         </div>
-        <div id="content">
+        <div id="content" class="center">
             <div class="post">
                 <h1>Transcritique - Bakunin and Marx</h1>
                 <p>
@@ -143,7 +144,6 @@
         body {
             margin: 0;
             padding: 0;
-            width: 100vw;
             overflow: scroll;
             font-size: large;
             background-color: rgb(40, 40, 50);
@@ -177,6 +177,11 @@
                 object-fit: contain;
                 z-index: 999;
             }
+            .center {
+                width: 100vw;
+                display: flex;
+                align-items: center;
+            }
             a {
                 color: lightblue;
                 text-decoration: none;
@@ -193,37 +198,32 @@
             #top {
                 background: url("static/header.png"), rgba(0, 0, 0, 0.8);
                 background-blend-mode: multiply;
-                padding: 1%;
-                padding-left: 15%;
-                padding-right: 15%;
+                width: 100vw;
+                min-width: 500px;
+                height: 300px;
+                padding: 10px;
                 #icon {
                     border-radius: 10%;
-                    width: 300px;
-                    height: 300px;
+                    width: 280px;
+                    height: 280px;
                 }
                 .item {
-                    font-size: 100px;
+                    height: 300px;
                     padding: 10px;
                     #name {
                         text-shadow: 5px 5px 10px violet;
-                        font-size: 70%;
+                        font-size: 80px;
                     }
                     #description {
                         text-align: center;
-                        font-size: 30%;
+                        font-size: 30px;
                         background-color: whitesmoke;
                         color: rgb(40, 40, 50);
                         margin-bottom: 20px;
                     }
                     #topic {
-                        width: 10px;
-                        white-space: nowrap;
+                        font-size: 20px;
                         overflow-x: visible;
-                    }
-                    .degree {
-                        font-size: 25%;
-                        color: whitesmoke;
-                        margin-bottom: 1%;
                     }
                     div {
                         margin-bottom: 10px;
@@ -231,18 +231,20 @@
                 }
             }
             #content {
-                padding-top: 5%;
-                padding-bottom: 5%;
-                padding-left: 15%;
-                padding-right: 15%;
+                margin: 0;
+                padding: 0;
+                margin-top: 50px;
+                flex-direction: column;
                 .post {
+                    max-width: 1000px;
+                    text-align: left;
                     border-bottom-right-radius: 15px;
                     border: 1.5px solid lightblue;
                     border-left-style: none;
                     border-top-style: none;
                     margin: 0;
                     margin-bottom: 10px;
-                    padding: 1vw;
+                    padding: 15px;
                     h1 {
                         margin-bottom: 10px;
                     }
