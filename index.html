@@ -5,27 +5,31 @@
         <meta charset="UTF-8" />
     </head>
     <body>
-        <div id="top" class="container">
-            <div class="item"><img id="icon" src="static/icon.jpg" /></div>
-            <div class="item">
-                <div>
-                    <p id="name">Remilia Darknets</p>
-                    <p id="description">🏴 Revolutionary Vampire Girl</p>
-                </div>
-                <div id="topic">
+        <div id="main">
+            <div id="top" class="container">
+                <div class="item"><img id="icon" src="static/icon.jpg" /></div>
+                <div id="profile" class="item">
+                    <div>
+                        <p id="name">Remilia Darknets</p>
+                        <p id="description">🏴 Revolutionary Vampire Girl</p>
+                    </div>
+                    <div id="topic">
+                        <p class="degree">
+                            🧐 Anarchism, Bakunin-ism, Libertarian Marxism,
+                            Hegelian Left
+                        </p>
+                        <p class="degree">
+                            💻 Decentralized Computing, Peer to Peer Technology
+                        </p>
+                        <p class="degree">🎨 Russian Avant‑Garde, Hacker</p>
+                    </div>
                     <p class="degree">
-                        🧐 Anarchism, Bakunin-ism, Libertarian Marxism, Hegelian
-                        Left
+                        <a href="https://x.com/anarchodynabook"> Twitter(X) </a>
+                        <a href="https://github.com/anarcho-dynabook">
+                            GitHub
+                        </a>
                     </p>
-                    <p class="degree">
-                        💻 Decentralized Computing, Peer to Peer Technology
-                    </p>
-                    <p class="degree">🎨 Russian Avant‑Garde, Hacker</p>
                 </div>
-                <p class="degree">
-                    <a href="https://x.com/anarchodynabook"> Twitter(X) </a>
-                    <a href="https://github.com/anarcho-dynabook"> GitHub </a>
-                </p>
             </div>
         </div>
         <div id="content" class="center">
@@ -195,38 +199,48 @@
                 overflow: hidden;
                 user-select: none;
             }
-            #top {
-                background: url("static/header.png"), rgba(0, 0, 0, 0.8);
+            #main {
+                background: url("static/header.png"), rgba(0, 0, 0, 80%);
                 background-blend-mode: multiply;
-                width: 100vw;
-                min-width: 500px;
-                height: 300px;
-                padding: 10px;
-                #icon {
-                    border-radius: 10%;
-                    width: 280px;
-                    height: 280px;
-                }
-                .item {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                #top {
+                    min-width: 900px;
                     height: 300px;
                     padding: 10px;
-                    #name {
-                        text-shadow: 5px 5px 10px violet;
-                        font-size: 80px;
+                    #icon {
+                        border-radius: 10%;
+                        width: 275px;
+                        height: 275px;
                     }
-                    #description {
-                        text-align: center;
-                        font-size: 30px;
-                        background-color: whitesmoke;
-                        color: rgb(40, 40, 50);
-                        margin-bottom: 20px;
+                    #profile {
+                        width: 610px;
+                        #name {
+                            text-shadow: 5px 5px 10px violet;
+                            font-size: 80px;
+                        }
+                        #description {
+                            text-align: center;
+                            font-size: 30px;
+                            background-color: whitesmoke;
+                            color: rgb(40, 40, 50);
+                            margin-bottom: 20px;
+                        }
+                        #topic {
+                            font-size: 20px;
+                            overflow-x: visible;
+                        }
+                        div {
+                            margin-bottom: 10px;
+                        }
                     }
-                    #topic {
-                        font-size: 20px;
-                        overflow-x: visible;
-                    }
-                    div {
-                        margin-bottom: 10px;
+                    .item {
+                        height: 300px;
+                        padding: 10px;
                     }
                 }
             }
